@@ -7,8 +7,13 @@ interface Todo {
   userId: string;
 }
 
+export const revalidate = 0;
+
 const Contact = async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const response = await fetch("https://jsonplaceholder.typicode.com/todos", {
+    cache: "no-store",
+  });
+
   const data: Todo[] = await response.json();
   return (
     <div>
