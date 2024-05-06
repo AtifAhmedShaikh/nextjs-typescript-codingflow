@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Metadata } from "next";
 
 interface Todo {
   completed: Boolean;
@@ -41,6 +42,11 @@ const Contact = async () => {
       })}
     </div>
   );
+};
+
+export const metadata: Metadata = {
+  title: "Contact Page Here",
+  description: "Contact description...",
 };
 
 export default Contact;
