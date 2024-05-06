@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Todo {
   completed: Boolean;
   title: string;
@@ -13,6 +15,22 @@ const Contact = async () => {
       {data.map((item: Todo) => {
         return (
           <div>
+            <Image
+              width={40}
+              height={40}
+              src={
+                "https://plus.unsplash.com/premium_photo-1673624399950-99066a5c9663?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8"
+              }
+              alt="Image..."
+            />
+            <Image
+              width={40}
+              height={40}
+              src={
+                "https://images.unsplash.com/photo-1714745454829-a64751d90480?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8"
+              }
+              alt="Image..."
+            />
             <p className="text-lg">{item.title}</p>
             <p className="text-md">{item.userId}</p>
             <p className="text-sm">
