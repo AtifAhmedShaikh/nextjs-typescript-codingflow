@@ -18,9 +18,9 @@ const Contact = async () => {
   return (
     <div>
       <h1>Contact</h1>
-      {data.map((item: Todo) => {
+      {data.map((item: Todo, index: number) => {
         return (
-          <div>
+          <div key={index}>
             <Image
               width={40}
               height={40}
