@@ -61,18 +61,11 @@ import { NextRequest, NextResponse } from "next/server";
     age: "30",
   },
 ];
-export async function GET(request: NextRequest) {
+export async function GET(request: NextRequest, { params }: { params: any }) {
   const { searchParams } = new URL(request.url);
+  console.log(params._id);
   return NextResponse.json({
-    message: "Hi I am from Get route of users ",
+    message: "Hi I am from Get User By Id route of users ",
     query: searchParams,
-  });
-}
-
-export async function POST(request: NextRequest) {
-  const reqBody = await request.json();
-  return NextResponse.json({
-    message: "Hi I am from Get route of users ",
-    data: reqBody,
   });
 }
