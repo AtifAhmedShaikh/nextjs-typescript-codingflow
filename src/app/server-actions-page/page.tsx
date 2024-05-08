@@ -1,6 +1,7 @@
 "use client";
+
 import React, { FormEvent } from "react";
-import { handleAction } from "@/actions";
+import { handleAction, handleUpdateClick } from "@/actions";
 
 const ServerAction = () => {
   return (
@@ -10,6 +11,13 @@ const ServerAction = () => {
         <input className="border" type="email" name="email" id="" />
         <button type="submit">Submit</button>
       </form>
+      <button
+        onClick={() => {
+          handleUpdateClick(1);
+        }}
+      >
+        Update
+      </button>
     </div>
   );
 };

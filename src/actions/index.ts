@@ -11,4 +11,6 @@ export const handleAction = async (e: any) => {
   });
 };
 
-export const handleUpdateClick = () => {};
+export const handleUpdateClick = (e: any) => {
+  console.log(e);
+};
