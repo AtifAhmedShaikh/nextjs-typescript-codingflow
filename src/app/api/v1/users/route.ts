@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-[
+const usersData = [
   {
     username: "JohnDoe",
     email: "johndoe@example.com",
@@ -65,7 +65,7 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   return NextResponse.json({
     message: "Hi I am from Get route of users ",
-    query: searchParams,
+    data: usersData,
   });
 }
 
