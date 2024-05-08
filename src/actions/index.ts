@@ -10,3 +10,5 @@ export const handleAction = async (e: any) => {
     flag: "w",
   });
 };
+
+export const handleUpdateClick = () => {};

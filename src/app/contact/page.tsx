@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import { handleUpdateClick } from "@/actions/index";
 
 interface Todo {
   completed: Boolean;
@@ -45,6 +46,7 @@ const Contact = async () => {
           </div>
         );
       })}
+      <button formAction={handleUpdateClick}>Click to Update </button>
     </div>
   );
 };
