@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-[
+const usersData = [
   {
     username: "JohnDoe",
     email: "johndoe@example.com",
@@ -63,9 +63,11 @@ import { NextRequest, NextResponse } from "next/server";
 ];
 export async function GET(request: NextRequest, { params }: { params: any }) {
   const { searchParams } = new URL(request.url);
+  const userId = params._id;
   console.log(params._id);
   return NextResponse.json({
     message: "Hi I am from Get User By Id route of users ",
     query: searchParams,
+    data: usersData[userId?.toString()?.length],
   });
 }
