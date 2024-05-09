@@ -15,6 +15,9 @@ const UserTodos = () => {
             Add Todo
           </button>
         </div>
+        <button className="hover:bg-green-600 rounded-md border-green-600 border px-3 ml-4 hover:text-gray-100 mt-2">
+          Completed
+        </button>
         <div className="w-100 px-3 mt-5">
           <TodoItem />
           <TodoItem />
