@@ -1,7 +1,7 @@
 "use server";
 import fs from "fs/promises";
 
-export const handleAction = async (e: any) => {
+export const handleAction = async (e: FormData) => {
   const object = Object.fromEntries(e.entries());
   console.log(object);
   await fs.writeFile("./src/generated-file.json", JSON.stringify(object), {
