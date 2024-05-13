@@ -18,6 +18,9 @@ const Navbar = () => {
       <Link href={"/contact"} className="border-b border-blue-800">
         Contact
       </Link>
+      <Link href={"/user-todos"} className="border-b border-blue-800">
+        Todo List
+      </Link>
       <Link href={"/login"} className="border-b border-blue-800">
         Login
       </Link>
