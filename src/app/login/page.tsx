@@ -25,7 +25,7 @@ const LoginUser = () => {
               {...register("username")}
               placeholder="Email or Username"
             />
-            {errors.password && <p className="text-red-500">{errors.password.message}</p>}
+            {errors.username && <p className="text-red-500">{errors.username.message}</p>}
           </div>
           <div className="mb-3">
             <input
